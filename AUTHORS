@@ -1,0 +1,11 @@
+Sean Scanlon <zekat@mail.com> created zmeter as a derivitive of slsnif,
+v0.4.1. Sean wishes to acknowledge Yan Gurtovoy as the author of slsnif
+(Copyright (C) 2001 Yan "Warrior" Gurtovoy), and offer sincere thanks to
+Yan for both developing and releasing slsnif under the GPL.
+
+Due to the large amount of slsnif code that still remains in zmeter Sean 
+felt it appropriate to leave Yan Gurtovoy's slsnif copyright information 
+intact. PLEASE do NOT contact Yan Gurtovoy for support of zmeter.
+Instead, please contact Sean Scanlon <zekat@mail.com> for all zmeter
+comments, feature requests, issues and questions.
+

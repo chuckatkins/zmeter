@@ -1,0 +1,82 @@
+	zmeter - Serial Digital Multimeter Interface
+
+
+  Copyright (C) 2002 Sean "Zekat" Scanlon <zekat@mail.com>
+
+  zmeter was largely derived from slsnif, which is
+  Copyright (C) 2001 Yan "Warrior" Gurtovoy <ymg@azstarnet.com>
+
+  PLEASE PLEASE PLEASE do not send anything about zmeter to 
+  Yan "Warrior" Gurtovoy EXCEPT for sincere thanks for releasing
+  slsnif under the GPL!
+
+  PLEASE send all questions, comments, suggestions and feature
+  requests to Sean "Zekat" Scanlon <zekat@mail.com>
+
+
+  zmeter operates by waiting for data from the digital multimeter to 
+  appear on the serial port and then passing that data to a child process
+  to be formatted and output.
+
+  It takes following parameters / options:
+
+  Serial port to open (required).
+  --bytes, Print number of bytes received On/Off (optional, defaults to Off).
+  --copyright, Print copyright and version information, then exit.
+  --lock, Lock port On/Off (optional, defaults to On).
+  --samples N, Integer Number, N, of samples to take, then exit.
+    (optional, defaults to continuous (N = +Infinity).
+  --timestamp, Timestamp On/Off (optional, defaults to Off).
+  --verbose, Verbose, prints extra information
+
+  See man page for details on syntax, here are a few examples...
+  
+  Examples:
+    zmeter /dev/ttyS0
+        -- opens port /dev/ttyS0
+    zmeter -n /dev/ttyS1
+        -- opens port /dev/ttyS1, no attempt to lock serial port
+           is made
+    zmeter -v /dev/ttyS2
+        -- opens port /dev/ttyS2, extra output is generated
+    zmeter -h
+        -- displays help.           
+
+  RC file:
+    zmeter can read some options from a configuration file named
+    '.zmeterrc', located in the user's home directory. The following
+    options can be specified in this file:
+    
+      RC-file option        corresponding command line option
+      ------------------    ---------------------------------
+      TOTALBYTES ON/OFF     -b (--bytes)
+      TIMESTAMP  ON/OFF     -t (--timestamp)
+      NOLOCK     ON/OFF     -n (--nolock)
+
+    Options provided on the command line always override the
+    ones read from the rc-file.
+    
+    An example of rc-file with comments (zmeterrc-example) is
+    included in the distribution.
+   
+  How to use it:
+    - start zmeter on a given port
+    - when you're done, stop zmeter by hitting <Ctrl + C>.
+      
+  zmeter is free software; you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation; either version 2 of the License, or
+  (at your option) any later version.
+
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+
+  You should have received a copy of the GNU General Public License
+  along with this program; if not, write to the Free Software
+  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+
+Comments are welcome.
+
+	- Sean "Zekat" Scanlon <zekat@mail.com>

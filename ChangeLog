@@ -1,0 +1,46 @@
+15-Dec-2003
+        * 0.1.3: this is an unstable, development, version
+            -   changed PORTNAMELEN to MAXPATHLEN
+ 5-May-2003
+        * 0.1.2: this is an unstable, development, version
+            -   continued cleaning up serial port code
+            -   started cleaning up interprocess communication (pipe) code
+            -   factored out timestamping code
+            -   discovered pty code was no longer used and eliminated it 
+            -   updated README file and man page - no pty used
+29-Mar-2003
+        * 0.1.1: this is an unstable, development, version
+            -   continued cleaning up serial port code
+            -   fixed so-called "Control-C" bug (really a double-free of a 
+                string. Control-C just flushed the bug out of hiding)
+            -   fixed some grammar "bugs" in README file
+ 7-Dec-2002
+        * 0.1.0: this is an unstable, development, version
+            -   started cleaning up serial port code
+            -   has a small bug related to Control-C handling
+            -   if you are not interested in helping me debug,
+                please use the latest stable version, 0.0.4 
+19-Sep-2002
+	* 0.0.4:
+	    -	added VERBOSE option to rc file support
+	    -	tested rc file support, 
+	    -	updated zmeterrc-example
+	    -	updated several project documentation files.
+13-Sep-2002
+	* 0.0.3:
+	    -	added "--samples" switch
+12-Sep-2002
+	* 0.0.2:
+	    -	added "--version" switch, reversed function of "--quiet"
+                switch and renamed to "--verbose"
+11-Sep-2002
+	* 0.0.1:
+	    -	first public release.
+                Special thanks to Yan "Warrior" Gurtovoy for releasing
+                slsnif, a Serial Line Sniffer, under the GPL: zmeter 
+                was derived from slnif (version 0.4.1)  much as a donut
+                hole is derived from a donut: by cutting the good stuff
+                out of the middle. zmeter would not have existed without
+                slsnif providing the already debugged serial-port-sniffing
+                code. Again, thank you Yan "Warrior" Gurtovoy.
+

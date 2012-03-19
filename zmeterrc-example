@@ -1,0 +1,18 @@
+#
+# configuration file for zmeter
+#
+# lines that begin with '#' are treated as comments
+#
+# set this to ON in order to disable device locking
+NOLOCK     OFF
+#
+# set this to ON for displaying timestamps
+TIMESTAMP  OFF
+#
+# set this to ON for displaying total bytes transmitted
+TOTALBYTES OFF
+#
+# set this to ON for additional information
+VERBOSE    OFF
+#
+# end of rc-file

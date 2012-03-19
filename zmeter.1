@@ -1,0 +1,114 @@
+.\" hey, Emacs:   -*- nroff -*-
+.\" zmeter is free software; you can redistribute it and/or modify
+.\" it under the terms of the GNU General Public License as published by
+.\" the Free Software Foundation; either version 2 of the License, or
+.\" (at your option) any later version.
+.\" 
+.\" This program is distributed in the hope that it will be useful,
+.\" but WITHOUT ANY WARRANTY; without even the implied warranty of
+.\" MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+.\" GNU General Public License for more details.
+.\" 
+.\" You should have received a copy of the GNU General Public License
+.\" along with this program; see the file COPYING.  If not, write to
+.\" the Free Software Foundation, 675 Mass Ave, Cambridge, MA 02139, USA.
+.\" 
+.\" Please update the above date whenever this man page is modified.
+.\" 
+.\" Some roff macros, for reference:
+.\" .nh        disable hyphenation
+.\" .hy        enable hyphenation
+.\" .ad l      left justify
+.\" .ad b      justify to both left and right margins (default)
+.\" .nf        disable filling
+.\" .fi        enable filling
+.\" .br        insert line break
+.\" .sp <n>    insert n+1 empty lines
+.\" for manpage-specific macros, see man(7)
+.TH "ZMETER" "1" "0.1.3" "Zekat" "Debug"
+.SH "NAME"
+zmeter \- Serial digital multimeter interface
+.SH "SYNOPSIS"
+.B zmeter
+[\-b] [\-h] [\-n] [\-s N] [\-t] [\-v] [\-V] port
+ 
+.SH "DESCRIPTION"
+\fBzmeter\fR is a serial digital multimeter (DMM) interface. It initially supports the RadioShack model number 22812 DMM, a 46 Range Digital Multimeter. It listens to the specified serial port and writes all data coming through it to stdout.
+.PP 
+\fBzmeter\fR operates by waiting for data from the digital multimeter to appear on the serial port and then passing that data to a child process to be formatted and output.
+.PP 
+.SH "PARAMETERS"
+\fBzmeter\fP accepts the following parameters:
+.TP 
+.B <port> (required)
+The serial port to listen to. (/dev/ttyS0, /dev/ttyS1, etc.)
+.\"
+.SH "OPTIONS"
+.TP 
+.B [\-b] ([\-\-bytes])
+Print number of bytes transmitted on every read.
+.TP 
+.B [\-h] ([\-\-help])
+Display help.
+.TP 
+.B [\-n] ([\-\-nolock])
+Disable locking of the port.
+Normally not a good idea, but can be very useful if one doesn't have
+permissions to write to lock directory
+(usually /var/lock/)
+.TP 
+.B [\-s] ([\-\-samples]) N
+Read N samples from the meter and then exit. N equal to zero ('0') is the default, meaning sample forever (or until Ctrl-C, whichever comes first).
+.TP 
+.B [\-t] ([\-\-timestamp])
+Print timestamp for every transmission.
+.TP 
+.B [\-v] ([\-\-verbose])
+Print extra information besides the measurement result.
+.TP 
+.B [\-V] ([\-\-version])
+Print version and copyright information.
+.br 
+.br 
+.br 
+.br 
+.br 
+.br 
+.\"
+.SH "RC FILE"
+.PP 
+The following options can be specified via rc\-file '.zmeterrc', which should be located in the user's home directory:
+.TP 
+.B NOLOCK     ON/OFF
+\-\- corresponds to \-n (\-\-nolock).
+.TP 
+.B TIMESTAMP  ON/OFF
+\-\- corresponds to \-t (\-\-timestamp).
+.TP 
+.B TOTALBYTES ON/OFF
+\-\- corresponds to \-b (\-\-bytes).
+.TP 
+.B VERBOSE    ON/OFF
+\-\- corresponds to \-v (\-\-verbose).
+.PP 
+Options specified via command line \fIalways override\fR the ones specified via rc\-file.
+.PP 
+.\"
+.SH "EXAMPLE"
+.PP 
+\fBzmeter /dev/ttyS1\fR
+.br 
+\fI
+       Opened pty: /dev/ttyp0
+       Opened port: /dev/ttyS1
+\fR
+.br 
+Note: pty \fBzmeter\fR has opened is \fI/dev/ttyp0\fR.
+.SH "SEE ALSO"
+.BR setserial (8), 
+.BR stty (1).
+.\"
+.SH "AUTHOR"
+Sean "Zekat" Scanlon <zekat@mail.com>.
+Derived from slsnif, written by Yan "Warrior" Gurtovoy <ymg@azstarnet.com>.
+

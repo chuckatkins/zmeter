@@ -1,0 +1,83 @@
+/* config.h.in.  Generated automatically from configure.in by autoheader.  */
+
+/* Name of the package */
+#undef PACKAGE
+/* Version of the package */
+#undef VERSION
+/* Define if you have the `ctime' function. */
+#undef HAVE_CTIME
+
+/* Define if you have the <fcntl.h> header file. */
+#undef HAVE_FCNTL_H
+
+/* Define if you have the `ftime' function. */
+#undef HAVE_FTIME
+
+/* Define if you have the <getopt.h> header file. */
+#undef HAVE_GETOPT_H
+
+/* Define if you have the `getopt_long' function. */
+#undef HAVE_GETOPT_LONG
+
+/* Define if you have the <inttypes.h> header file. */
+#undef HAVE_INTTYPES_H
+
+/* Define if you have the <linux/kdev_t.h> header file. */
+#undef HAVE_LINUX_KDEV_T_H
+
+/* Define if you have the <linux/major.h> header file. */
+#undef HAVE_LINUX_MAJOR_H
+
+/* Define if you have the <memory.h> header file. */
+#undef HAVE_MEMORY_H
+
+/* Define if you have the `select' function. */
+#undef HAVE_SELECT
+
+/* Define if you have the <stdlib.h> header file. */
+#undef HAVE_STDLIB_H
+
+/* Define if you have the `strdup' function. */
+#undef HAVE_STRDUP
+
+/* Define if you have the <strings.h> header file. */
+#undef HAVE_STRINGS_H
+
+/* Define if you have the <string.h> header file. */
+#undef HAVE_STRING_H
+
+/* Define if you have the <sys/timeb.h> header file. */
+#undef HAVE_SYS_TIMEB_H
+
+/* Define if you have the `time' function. */
+#undef HAVE_TIME
+
+/* Define if you have the <time.h> header file. */
+#undef HAVE_TIME_H
+
+/* Define if you have the <unistd.h> header file. */
+#undef HAVE_UNISTD_H
+
+/* Name of package */
+#undef PACKAGE
+
+/* Define as the return type of signal handlers (`int' or `void'). */
+#undef RETSIGTYPE
+
+/* Define to the type of arg 1 for `select'. */
+#undef SELECT_TYPE_ARG1
+
+/* Define to the type of args 2, 3 and 4 for `select'. */
+#undef SELECT_TYPE_ARG234
+
+/* Define to the type of arg 5 for `select'. */
+#undef SELECT_TYPE_ARG5
+
+/* Define if you have the ANSI C header files. */
+#undef STDC_HEADERS
+
+/* Version number of package */
+#undef VERSION
+
+/* Define to `int' if <sys/types.h> does not define. */
+#undef pid_t
